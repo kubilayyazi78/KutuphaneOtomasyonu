@@ -32,7 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,14 +52,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Kira.cs" />
+    <Compile Include="Entities\Kitap.cs" />
+    <Compile Include="Entities\Uye.cs" />
+    <Compile Include="Entities\Yazar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812280608427_baglanti.cs" />
+    <Compile Include="Migrations\201812280608427_baglanti.Designer.cs">
+      <DependentUpon>201812280608427_baglanti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280644582_yazarkitap.cs" />
+    <Compile Include="Migrations\201812280644582_yazarkitap.Designer.cs">
+      <DependentUpon>201812280644582_yazarkitap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280645316_kitapyazar.cs" />
+    <Compile Include="Migrations\201812280645316_kitapyazar.Designer.cs">
+      <DependentUpon>201812280645316_kitapyazar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280647274_kitapyazar1.cs" />
+    <Compile Include="Migrations\201812280647274_kitapyazar1.Designer.cs">
+      <DependentUpon>201812280647274_kitapyazar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280811172_iliskiler3.cs" />
+    <Compile Include="Migrations\201812280811172_iliskiler3.Designer.cs">
+      <DependentUpon>201812280811172_iliskiler3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280815137_iliskiler4.cs" />
+    <Compile Include="Migrations\201812280815137_iliskiler4.Designer.cs">
+      <DependentUpon>201812280815137_iliskiler4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280816561_iliskiler5.cs" />
+    <Compile Include="Migrations\201812280816561_iliskiler5.Designer.cs">
+      <DependentUpon>201812280816561_iliskiler5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280608427_baglanti.resx">
+      <DependentUpon>201812280608427_baglanti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280644582_yazarkitap.resx">
+      <DependentUpon>201812280644582_yazarkitap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280645316_kitapyazar.resx">
+      <DependentUpon>201812280645316_kitapyazar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280647274_kitapyazar1.resx">
+      <DependentUpon>201812280647274_kitapyazar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280811172_iliskiler3.resx">
+      <DependentUpon>201812280811172_iliskiler3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280815137_iliskiler4.resx">
+      <DependentUpon>201812280815137_iliskiler4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280816561_iliskiler5.resx">
+      <DependentUpon>201812280816561_iliskiler5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +127,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

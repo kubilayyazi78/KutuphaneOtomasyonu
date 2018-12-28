@@ -1,7 +1,9 @@
-﻿using System;
+﻿using KutuphaneOtomasyonu.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,5 +18,13 @@ namespace KutuphaneOtomasyonu
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MyContext db = new MyContext();
+
+            
+        }
+        public virtual DbSet<Kitap> Kitaplar { get; set; }
     }
 }

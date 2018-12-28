@@ -26,5 +26,33 @@ namespace KutuphaneOtomasyonu
             
         }
         public virtual DbSet<Kitap> Kitaplar { get; set; }
+
+        private void uyeIslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UyeForm uyeForm = new UyeForm();
+            uyeForm.MdiParent = this;
+            uyeForm.Show();
+        }
+
+        private void yazarİslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YazarForm yazarForm = new YazarForm();
+            yazarForm.MdiParent = this;
+            yazarForm.Show();
+        }
+
+        private void kitapİslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KitapForm kitapForm = new KitapForm();
+            kitapForm.MdiParent = this;
+            kitapForm.Show();
+        }
+
+        private void kitapKiralaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KitapKiralaForm kitapKiralaForm = new KitapKiralaForm();
+            kitapKiralaForm.MdiParent = this;
+            kitapKiralaForm.Show();
+        }
     }
 }

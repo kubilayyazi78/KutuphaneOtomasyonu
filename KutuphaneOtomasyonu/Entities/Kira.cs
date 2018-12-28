@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 namespace KutuphaneOtomasyonu.Entities
 {
     [Table("Kiralar")]
-   public class Kira
-    {   
+    public class Kira
+    {
         [Key]
-        [Column(Order =1)]
+        [Column(Order = 1)]
         public int UyeId { get; set; }
-        
+
         [Key]
         [Column(Order = 2)]
         public int KitapId { get; set; }

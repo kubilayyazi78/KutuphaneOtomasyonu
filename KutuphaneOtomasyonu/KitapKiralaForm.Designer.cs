@@ -125,6 +125,7 @@
             this.Controls.Add(this.lblUyeAd);
             this.Name = "KitapKiralaForm";
             this.Text = "KitapKiralaForm";
+            this.Load += new System.EventHandler(this.KitapKiralaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

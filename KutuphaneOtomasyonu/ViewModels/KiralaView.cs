@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace KutuphaneOtomasyonu.ViewModels
 {
-   public class KiralaView
+    public class KiralaView
     {
+
+        public int UyeId { get; set; }
+        public int KitapId { get; set; }  
+        public DateTime AlinanTarih { get; set; } = DateTime.Now;
+
     }
 }

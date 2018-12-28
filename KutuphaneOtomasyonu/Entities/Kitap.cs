@@ -10,7 +10,7 @@ namespace KutuphaneOtomasyonu.Entities
 {
 
     [Table("Kitaplar")]
-   public class Kitap
+    public class Kitap
     {
         [Key]
         public int KitapId { get; set; }
@@ -18,7 +18,7 @@ namespace KutuphaneOtomasyonu.Entities
 
         [Required]
         [StringLength(25)]
-        [Index(IsUnique =true)]
+        [Index(IsUnique = true)]
         public string KitapAdi { get; set; }
         [Required]
         public int YazarId { get; set; }
@@ -27,6 +27,11 @@ namespace KutuphaneOtomasyonu.Entities
         public virtual Yazar Yazar { get; set; }
 
         public virtual ICollection<Kira> Kiralik { get; set; } = new HashSet<Kira>();
-  
+
+        public override string ToString()
+        {
+            return this.KitapAdi + " - " + Yazar.YazarAdi;
+        }
+
     }
 }

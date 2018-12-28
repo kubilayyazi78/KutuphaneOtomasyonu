@@ -8,5 +8,10 @@ namespace KutuphaneOtomasyonu.ViewModels
 {
    public class YazarView
     {
+        public int YazarId { get; set; }
+        public string YazarAdi { get; set; }
+        public string YazarSoyadi { get; set; }
+
+        public override string ToString() => ($"{YazarAdi} {YazarSoyadi}");
     }
 }

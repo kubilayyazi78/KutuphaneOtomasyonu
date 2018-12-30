@@ -82,5 +82,66 @@ namespace KutuphaneOtomasyonu
                 MessageBox.Show("Hatalı Bir Silme İşlemi Gerçekleştirdiniz");
             }
         }
+        int uyId;
+        private void lstUye_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstUye.SelectedItem == null)
+            {
+                return;
+            }
+
+            MyContext db = new MyContext();
+            UyeView seciliUye = (UyeView)lstUye.SelectedItem;
+            uyId = seciliUye.UyeId;
+            var uye = db.Uyeler.Find(uyId);
+            txtUyeAdi.Text = uye.UyeAdi;
+            txtUyeSoyadi.Text = uye.UyeSoyadi;
+            txtUyeTc.Text = uye.TcKimlik;
+
+        }
+
+        private void btnUyeGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MyContext db = new MyContext();
+                UyeView seciliUye = (UyeView)lstUye.SelectedItem;
+                uyId = seciliUye.UyeId;
+
+                var uye = db.Uyeler.Find(uyId);
+                uye.UyeAdi = txtUyeAdi.Text;
+                uye.UyeSoyadi = txtUyeSoyadi.Text;
+                uye.TcKimlik = txtUyeTc.Text;
+                db.SaveChanges();
+                UyeleriGetir();
+                MessageBox.Show("Üye Bilgileri Güncellenmiştir");
+            }
+            catch
+            {
+                MessageBox.Show("Üye Bilgileri Güncellenirken Hata Oluştu");
+
+            }
+        }
+
+        private void txtUyeArama_KeyUp(object sender, KeyEventArgs e)
+        {
+            string arama = txtUyeArama.Text.ToLower();
+
+            MyContext db = new MyContext();
+            List<UyeView> bulunanUyeler = new List<UyeView>();
+            db.Uyeler
+                .Where(x => x.UyeAdi.ToLower().Contains(arama) || x.UyeSoyadi.ToLower().Contains(arama))
+                .ToList()
+                .ForEach(x => bulunanUyeler.Add(new UyeView()
+                {
+                    UyeSoyadi = x.UyeSoyadi,
+                    UyeAdi = x.UyeAdi,
+                    UyeId = x.UyeId,
+                    Ceza = x.Ceza,
+                    TcKimlik = x.TcKimlik
+
+                }));
+            lstUye.DataSource = bulunanUyeler;
+        }
     }
 }

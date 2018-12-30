@@ -39,15 +39,17 @@
             this.cmsSil = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstUye = new System.Windows.Forms.ListBox();
+            this.btnUyeGuncelle = new System.Windows.Forms.Button();
+            this.txtUyeArama = new System.Windows.Forms.TextBox();
             this.cmsSil.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUyeEkle
             // 
-            this.btnUyeEkle.Location = new System.Drawing.Point(527, 511);
+            this.btnUyeEkle.Location = new System.Drawing.Point(493, 519);
             this.btnUyeEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUyeEkle.Name = "btnUyeEkle";
-            this.btnUyeEkle.Size = new System.Drawing.Size(100, 28);
+            this.btnUyeEkle.Size = new System.Drawing.Size(132, 28);
             this.btnUyeEkle.TabIndex = 29;
             this.btnUyeEkle.Text = "Uye Ekle";
             this.btnUyeEkle.UseVisualStyleBackColor = true;
@@ -55,7 +57,7 @@
             // 
             // txtUyeTc
             // 
-            this.txtUyeTc.Location = new System.Drawing.Point(493, 458);
+            this.txtUyeTc.Location = new System.Drawing.Point(493, 476);
             this.txtUyeTc.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeTc.Name = "txtUyeTc";
             this.txtUyeTc.Size = new System.Drawing.Size(132, 22);
@@ -63,7 +65,7 @@
             // 
             // txtUyeSoyadi
             // 
-            this.txtUyeSoyadi.Location = new System.Drawing.Point(493, 421);
+            this.txtUyeSoyadi.Location = new System.Drawing.Point(493, 439);
             this.txtUyeSoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeSoyadi.Name = "txtUyeSoyadi";
             this.txtUyeSoyadi.Size = new System.Drawing.Size(132, 22);
@@ -71,7 +73,7 @@
             // 
             // txtUyeAdi
             // 
-            this.txtUyeAdi.Location = new System.Drawing.Point(493, 382);
+            this.txtUyeAdi.Location = new System.Drawing.Point(493, 400);
             this.txtUyeAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeAdi.Name = "txtUyeAdi";
             this.txtUyeAdi.Size = new System.Drawing.Size(132, 22);
@@ -80,7 +82,7 @@
             // lblUyeTc
             // 
             this.lblUyeTc.AutoSize = true;
-            this.lblUyeTc.Location = new System.Drawing.Point(389, 466);
+            this.lblUyeTc.Location = new System.Drawing.Point(389, 484);
             this.lblUyeTc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeTc.Name = "lblUyeTc";
             this.lblUyeTc.Size = new System.Drawing.Size(93, 17);
@@ -90,7 +92,7 @@
             // lblUyeAdi
             // 
             this.lblUyeAdi.AutoSize = true;
-            this.lblUyeAdi.Location = new System.Drawing.Point(389, 385);
+            this.lblUyeAdi.Location = new System.Drawing.Point(389, 403);
             this.lblUyeAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeAdi.Name = "lblUyeAdi";
             this.lblUyeAdi.Size = new System.Drawing.Size(57, 17);
@@ -100,7 +102,7 @@
             // lblUyeSoyadi
             // 
             this.lblUyeSoyadi.AutoSize = true;
-            this.lblUyeSoyadi.Location = new System.Drawing.Point(389, 430);
+            this.lblUyeSoyadi.Location = new System.Drawing.Point(389, 448);
             this.lblUyeSoyadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeSoyadi.Name = "lblUyeSoyadi";
             this.lblUyeSoyadi.Size = new System.Drawing.Size(80, 17);
@@ -131,12 +133,33 @@
             this.lstUye.Name = "lstUye";
             this.lstUye.Size = new System.Drawing.Size(1030, 292);
             this.lstUye.TabIndex = 32;
+            this.lstUye.SelectedIndexChanged += new System.EventHandler(this.lstUye_SelectedIndexChanged);
+            // 
+            // btnUyeGuncelle
+            // 
+            this.btnUyeGuncelle.Location = new System.Drawing.Point(493, 350);
+            this.btnUyeGuncelle.Name = "btnUyeGuncelle";
+            this.btnUyeGuncelle.Size = new System.Drawing.Size(132, 32);
+            this.btnUyeGuncelle.TabIndex = 33;
+            this.btnUyeGuncelle.Text = "Uye Güncelle";
+            this.btnUyeGuncelle.UseVisualStyleBackColor = true;
+            this.btnUyeGuncelle.Click += new System.EventHandler(this.btnUyeGuncelle_Click);
+            // 
+            // txtUyeArama
+            // 
+            this.txtUyeArama.Location = new System.Drawing.Point(493, 310);
+            this.txtUyeArama.Name = "txtUyeArama";
+            this.txtUyeArama.Size = new System.Drawing.Size(132, 22);
+            this.txtUyeArama.TabIndex = 34;
+            this.txtUyeArama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUyeArama_KeyUp);
             // 
             // UyeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.txtUyeArama);
+            this.Controls.Add(this.btnUyeGuncelle);
             this.Controls.Add(this.lstUye);
             this.Controls.Add(this.btnUyeEkle);
             this.Controls.Add(this.txtUyeTc);
@@ -167,5 +190,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsSil;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
         private System.Windows.Forms.ListBox lstUye;
+        private System.Windows.Forms.Button btnUyeGuncelle;
+        private System.Windows.Forms.TextBox txtUyeArama;
     }
 }

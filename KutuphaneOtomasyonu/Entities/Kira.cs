@@ -11,6 +11,9 @@ namespace KutuphaneOtomasyonu.Entities
     [Table("Kiralar")]
     public class Kira
     {
+
+
+
         [Key]
         [Column(Order = 1)]
         public int UyeId { get; set; }

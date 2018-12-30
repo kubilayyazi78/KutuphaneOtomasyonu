@@ -74,6 +74,12 @@
     <Compile Include="KitapKiralaForm.Designer.cs">
       <DependentUpon>KitapKiralaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitapTeslimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapTeslimForm.Designer.cs">
+      <DependentUpon>KitapTeslimForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201812280608427_baglanti.cs" />
     <Compile Include="Migrations\201812280608427_baglanti.Designer.cs">
       <DependentUpon>201812280608427_baglanti.cs</DependentUpon>
@@ -113,7 +119,11 @@
       <DependentUpon>UyeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\KiralaView.cs" />
+    <Compile Include="ViewModels\KitapUyeView.cs" />
     <Compile Include="ViewModels\KitapView.cs" />
+    <Compile Include="ViewModels\KitapYazarView.cs" />
+    <Compile Include="ViewModels\TeslimView.cs" />
+    <Compile Include="ViewModels\UyeKiraView.cs" />
     <Compile Include="ViewModels\UyeView.cs" />
     <Compile Include="ViewModels\YazarView.cs" />
     <Compile Include="YazarForm.cs">
@@ -130,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitapKiralaForm.resx">
       <DependentUpon>KitapKiralaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapTeslimForm.resx">
+      <DependentUpon>KitapTeslimForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812280608427_baglanti.resx">
       <DependentUpon>201812280608427_baglanti.cs</DependentUpon>

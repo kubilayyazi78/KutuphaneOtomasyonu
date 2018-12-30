@@ -1,4 +1,5 @@
 ﻿using KutuphaneOtomasyonu.Entities;
+using KutuphaneOtomasyonu.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,38 +21,76 @@ namespace KutuphaneOtomasyonu
 
         private void KitapKiralaForm_Load(object sender, EventArgs e)
         {
+            MyContext db = KiraGetir();
+            var uyeAdi = db.Uyeler
+                 .OrderBy(x => x.UyeAdi)
+                 .Select(x => new UyeKiraView()
+                 {
+                     UyeId = x.UyeId,
+                     UyeAdi = x.UyeAdi,
+                     UyeSoyadi = x.UyeSoyadi
+
+                 }).ToList();
+            cmbUyeAdi.DataSource = uyeAdi.ToList();
+
+            
+            var kitapAdi = db.Kitaplar
+                 .Select(x => new KitapUyeView()
+                 {
+                     KitapAdi = x.KitapAdi,
+                     KitapId = x.KitapId,
+                 }).ToList();
+            cmbKitapAdi.DataSource = kitapAdi.ToList();
+            cmbKitapAdi.DisplayMember = "KitapAdi";
+        }
+
+        private MyContext KiraGetir()
+        {
             MyContext db = new MyContext();
+            dgvKirala.DataSource =
+                db.Kiralar
+                .OrderBy(x => x.Uye.UyeAdi)
+                .Select(x => new KiralaView()
+                {
+                    UyeId = x.Uye.UyeAdi,
+                    KitapId = x.Kitap.KitapAdi,
+                    AlinanTarih = x.AlinanTarih
+                }).ToList();
+            return db;
+        }
 
-            var sorguKira = from kira in db.Kiralar
-                            join u in db.Uyeler on kira.UyeId equals u.UyeId
-                            join k in db.Kitaplar on kira.KitapId equals k.KitapId
-                            select new
-                            {
-                                kira.KitapId,
-                                kira.UyeId,
-                                kira.AlinanTarih
-
-                            };
-
-            ListViewItem lvItem = new ListViewItem();
-
-            var kiralar = db.Kiralar.ToList();
-            foreach (var item in kiralar)
+        int ktpId;
+        int uyId;
+        private void btnKirala_Click(object sender, EventArgs e)
+        {
+            KitapUyeView seciliKitap = (KitapUyeView)cmbKitapAdi.SelectedItem;
+            ktpId = seciliKitap.KitapId;
+            UyeKiraView seciliUye = (UyeKiraView)cmbUyeAdi.SelectedItem;
+            uyId = seciliUye.UyeId;
+            MyContext db = new MyContext();
+            db.Kiralar.Add(new Kira()
             {
-                lvItem.SubItems.Add(item.KitapId.ToString());
-                lvItem.SubItems.Add(item.UyeId.ToString());
-                lvItem.SubItems.Add(item.AlinanTarih.ToString());
+                KitapId = ktpId,
+                UyeId = uyId
+            });
+         
+            KiraGetir();
 
+            var stok = db.Kitaplar.Find(ktpId);
+            
+            if (stok.Adet>0)
+            {
+                stok.Adet--;
+               
+                db.SaveChanges();
+                KiraGetir();
+            }
+            else if (stok.Adet ==0)
+            {
+                MessageBox.Show("Seçilen Kitap Kütüphanemizde Kalmamıştır.");
             }
             
-
-            cmbUyeAdi.DataSource = db.Uyeler.OrderBy(x => x.UyeAdi).ToList();
-            cmbUyeAdi.DisplayMember = "UyeAdi";
-
-            cmbKitapAdi.DataSource = db.Kitaplar.OrderBy(x => x.KitapAdi).ThenBy(x => x.Yazar.YazarAdi).ToList();
-          
-
-
+            
         }
     }
 }

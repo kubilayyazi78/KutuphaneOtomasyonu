@@ -54,5 +54,12 @@ namespace KutuphaneOtomasyonu
             kitapKiralaForm.MdiParent = this;
             kitapKiralaForm.Show();
         }
+
+        private void kitapTeslimEtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KitapTeslimForm kitapTeslimForm = new KitapTeslimForm();
+            kitapTeslimForm.MdiParent = this;
+            kitapTeslimForm.Show();
+        }
     }
 }

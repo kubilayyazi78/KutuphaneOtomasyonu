@@ -40,6 +40,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uyeIslemleriToolStripMenuItem,
             this.yazarİslemleriToolStripMenuItem,
@@ -47,28 +48,29 @@
             this.kiralamaIslemleriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // uyeIslemleriToolStripMenuItem
             // 
             this.uyeIslemleriToolStripMenuItem.Name = "uyeIslemleriToolStripMenuItem";
-            this.uyeIslemleriToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.uyeIslemleriToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.uyeIslemleriToolStripMenuItem.Text = "Uye Islemleri";
             this.uyeIslemleriToolStripMenuItem.Click += new System.EventHandler(this.uyeIslemleriToolStripMenuItem_Click);
             // 
             // yazarİslemleriToolStripMenuItem
             // 
             this.yazarİslemleriToolStripMenuItem.Name = "yazarİslemleriToolStripMenuItem";
-            this.yazarİslemleriToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.yazarİslemleriToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.yazarİslemleriToolStripMenuItem.Text = "Yazar Islemleri";
             this.yazarİslemleriToolStripMenuItem.Click += new System.EventHandler(this.yazarİslemleriToolStripMenuItem_Click);
             // 
             // kitapİslemleriToolStripMenuItem
             // 
             this.kitapİslemleriToolStripMenuItem.Name = "kitapİslemleriToolStripMenuItem";
-            this.kitapİslemleriToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.kitapİslemleriToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.kitapİslemleriToolStripMenuItem.Text = "Kitap Islemleri";
             this.kitapİslemleriToolStripMenuItem.Click += new System.EventHandler(this.kitapİslemleriToolStripMenuItem_Click);
             // 
@@ -78,30 +80,32 @@
             this.kitapKiralaToolStripMenuItem,
             this.kitapTeslimEtToolStripMenuItem});
             this.kiralamaIslemleriToolStripMenuItem.Name = "kiralamaIslemleriToolStripMenuItem";
-            this.kiralamaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.kiralamaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.kiralamaIslemleriToolStripMenuItem.Text = "Kiralama Islemleri";
             // 
             // kitapKiralaToolStripMenuItem
             // 
             this.kitapKiralaToolStripMenuItem.Name = "kitapKiralaToolStripMenuItem";
-            this.kitapKiralaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapKiralaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.kitapKiralaToolStripMenuItem.Text = "Kitap Kirala";
             this.kitapKiralaToolStripMenuItem.Click += new System.EventHandler(this.kitapKiralaToolStripMenuItem_Click);
             // 
             // kitapTeslimEtToolStripMenuItem
             // 
             this.kitapTeslimEtToolStripMenuItem.Name = "kitapTeslimEtToolStripMenuItem";
-            this.kitapTeslimEtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapTeslimEtToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.kitapTeslimEtToolStripMenuItem.Text = "Kitap Teslim Et";
+            this.kitapTeslimEtToolStripMenuItem.Click += new System.EventHandler(this.kitapTeslimEtToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

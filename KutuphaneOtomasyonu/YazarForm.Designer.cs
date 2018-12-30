@@ -28,93 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnYazarEkle = new System.Windows.Forms.Button();
             this.txtYazarSoyadi = new System.Windows.Forms.TextBox();
             this.txtYazarAdi = new System.Windows.Forms.TextBox();
             this.lblYazarSoyadi = new System.Windows.Forms.Label();
             this.lblYazarAdi = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.YazarAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.YazarSoyadi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsSil = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstYazarlar = new System.Windows.Forms.ListBox();
+            this.cmsSil.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnYazarEkle
             // 
-            this.btnYazarEkle.Location = new System.Drawing.Point(418, 395);
+            this.btnYazarEkle.Location = new System.Drawing.Point(557, 486);
+            this.btnYazarEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnYazarEkle.Name = "btnYazarEkle";
-            this.btnYazarEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnYazarEkle.Size = new System.Drawing.Size(100, 28);
             this.btnYazarEkle.TabIndex = 16;
             this.btnYazarEkle.Text = "Yazar Ekle";
             this.btnYazarEkle.UseVisualStyleBackColor = true;
+            this.btnYazarEkle.Click += new System.EventHandler(this.btnYazarEkle_Click);
             // 
             // txtYazarSoyadi
             // 
-            this.txtYazarSoyadi.Location = new System.Drawing.Point(393, 359);
+            this.txtYazarSoyadi.Location = new System.Drawing.Point(524, 442);
+            this.txtYazarSoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.txtYazarSoyadi.Name = "txtYazarSoyadi";
-            this.txtYazarSoyadi.Size = new System.Drawing.Size(100, 20);
+            this.txtYazarSoyadi.Size = new System.Drawing.Size(132, 22);
             this.txtYazarSoyadi.TabIndex = 15;
             // 
             // txtYazarAdi
             // 
-            this.txtYazarAdi.Location = new System.Drawing.Point(393, 332);
+            this.txtYazarAdi.Location = new System.Drawing.Point(524, 409);
+            this.txtYazarAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtYazarAdi.Name = "txtYazarAdi";
-            this.txtYazarAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtYazarAdi.Size = new System.Drawing.Size(132, 22);
             this.txtYazarAdi.TabIndex = 14;
             // 
             // lblYazarSoyadi
             // 
             this.lblYazarSoyadi.AutoSize = true;
-            this.lblYazarSoyadi.Location = new System.Drawing.Point(318, 362);
+            this.lblYazarSoyadi.Location = new System.Drawing.Point(424, 446);
+            this.lblYazarSoyadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblYazarSoyadi.Name = "lblYazarSoyadi";
-            this.lblYazarSoyadi.Size = new System.Drawing.Size(69, 13);
+            this.lblYazarSoyadi.Size = new System.Drawing.Size(92, 17);
             this.lblYazarSoyadi.TabIndex = 13;
             this.lblYazarSoyadi.Text = "Yazar Soyadı";
             // 
             // lblYazarAdi
             // 
             this.lblYazarAdi.AutoSize = true;
-            this.lblYazarAdi.Location = new System.Drawing.Point(318, 332);
+            this.lblYazarAdi.Location = new System.Drawing.Point(424, 409);
+            this.lblYazarAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblYazarAdi.Name = "lblYazarAdi";
-            this.lblYazarAdi.Size = new System.Drawing.Size(52, 13);
+            this.lblYazarAdi.Size = new System.Drawing.Size(69, 17);
             this.lblYazarAdi.TabIndex = 12;
             this.lblYazarAdi.Text = "Yazar Adı";
             // 
-            // listView1
+            // cmsSil
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.YazarAdi,
-            this.YazarSoyadi});
-            this.listView1.Location = new System.Drawing.Point(-3, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(797, 222);
-            this.listView1.TabIndex = 17;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.cmsSil.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem});
+            this.cmsSil.Name = "cmsSil";
+            this.cmsSil.Size = new System.Drawing.Size(95, 28);
+            this.cmsSil.Click += new System.EventHandler(this.cmsSil_Click);
             // 
-            // YazarAdi
+            // silToolStripMenuItem
             // 
-            this.YazarAdi.Text = "Yazar Adi";
-            this.YazarAdi.Width = 120;
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.silToolStripMenuItem.Text = "Sil";
             // 
-            // YazarSoyadi
+            // lstYazarlar
             // 
-            this.YazarSoyadi.Text = "Yazar Soyadi";
-            this.YazarSoyadi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.YazarSoyadi.Width = 120;
+            this.lstYazarlar.ContextMenuStrip = this.cmsSil;
+            this.lstYazarlar.FormattingEnabled = true;
+            this.lstYazarlar.ItemHeight = 16;
+            this.lstYazarlar.Location = new System.Drawing.Point(0, 0);
+            this.lstYazarlar.Name = "lstYazarlar";
+            this.lstYazarlar.Size = new System.Drawing.Size(1055, 292);
+            this.lstYazarlar.TabIndex = 17;
             // 
             // YazarForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lstYazarlar);
             this.Controls.Add(this.btnYazarEkle);
             this.Controls.Add(this.txtYazarSoyadi);
             this.Controls.Add(this.txtYazarAdi);
             this.Controls.Add(this.lblYazarSoyadi);
             this.Controls.Add(this.lblYazarAdi);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "YazarForm";
             this.Text = "YazarForm";
+            this.Load += new System.EventHandler(this.YazarForm_Load);
+            this.cmsSil.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,8 +140,8 @@
         private System.Windows.Forms.TextBox txtYazarAdi;
         private System.Windows.Forms.Label lblYazarSoyadi;
         private System.Windows.Forms.Label lblYazarAdi;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader YazarAdi;
-        private System.Windows.Forms.ColumnHeader YazarSoyadi;
+        private System.Windows.Forms.ContextMenuStrip cmsSil;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
+        private System.Windows.Forms.ListBox lstYazarlar;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnUyeEkle = new System.Windows.Forms.Button();
             this.txtUyeTc = new System.Windows.Forms.TextBox();
             this.txtUyeSoyadi = new System.Windows.Forms.TextBox();
@@ -35,113 +36,108 @@
             this.lblUyeTc = new System.Windows.Forms.Label();
             this.lblUyeAdi = new System.Windows.Forms.Label();
             this.lblUyeSoyadi = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.UyeAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.UyeSoyadi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.UyeTcKimlik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.UyeCeza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsSil = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstUye = new System.Windows.Forms.ListBox();
+            this.cmsSil.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUyeEkle
             // 
-            this.btnUyeEkle.Location = new System.Drawing.Point(395, 415);
+            this.btnUyeEkle.Location = new System.Drawing.Point(527, 511);
+            this.btnUyeEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUyeEkle.Name = "btnUyeEkle";
-            this.btnUyeEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnUyeEkle.Size = new System.Drawing.Size(100, 28);
             this.btnUyeEkle.TabIndex = 29;
             this.btnUyeEkle.Text = "Uye Ekle";
             this.btnUyeEkle.UseVisualStyleBackColor = true;
+            this.btnUyeEkle.Click += new System.EventHandler(this.btnUyeEkle_Click);
             // 
             // txtUyeTc
             // 
-            this.txtUyeTc.Location = new System.Drawing.Point(370, 372);
+            this.txtUyeTc.Location = new System.Drawing.Point(493, 458);
+            this.txtUyeTc.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeTc.Name = "txtUyeTc";
-            this.txtUyeTc.Size = new System.Drawing.Size(100, 20);
+            this.txtUyeTc.Size = new System.Drawing.Size(132, 22);
             this.txtUyeTc.TabIndex = 27;
             // 
             // txtUyeSoyadi
             // 
-            this.txtUyeSoyadi.Location = new System.Drawing.Point(370, 342);
+            this.txtUyeSoyadi.Location = new System.Drawing.Point(493, 421);
+            this.txtUyeSoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeSoyadi.Name = "txtUyeSoyadi";
-            this.txtUyeSoyadi.Size = new System.Drawing.Size(100, 20);
+            this.txtUyeSoyadi.Size = new System.Drawing.Size(132, 22);
             this.txtUyeSoyadi.TabIndex = 26;
             // 
             // txtUyeAdi
             // 
-            this.txtUyeAdi.Location = new System.Drawing.Point(370, 310);
+            this.txtUyeAdi.Location = new System.Drawing.Point(493, 382);
+            this.txtUyeAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeAdi.Name = "txtUyeAdi";
-            this.txtUyeAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtUyeAdi.Size = new System.Drawing.Size(132, 22);
             this.txtUyeAdi.TabIndex = 25;
             // 
             // lblUyeTc
             // 
             this.lblUyeTc.AutoSize = true;
-            this.lblUyeTc.Location = new System.Drawing.Point(292, 379);
+            this.lblUyeTc.Location = new System.Drawing.Point(389, 466);
+            this.lblUyeTc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeTc.Name = "lblUyeTc";
-            this.lblUyeTc.Size = new System.Drawing.Size(72, 13);
+            this.lblUyeTc.Size = new System.Drawing.Size(93, 17);
             this.lblUyeTc.TabIndex = 24;
             this.lblUyeTc.Text = "Uye Tc Kimlik";
             // 
             // lblUyeAdi
             // 
             this.lblUyeAdi.AutoSize = true;
-            this.lblUyeAdi.Location = new System.Drawing.Point(292, 313);
+            this.lblUyeAdi.Location = new System.Drawing.Point(389, 385);
+            this.lblUyeAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeAdi.Name = "lblUyeAdi";
-            this.lblUyeAdi.Size = new System.Drawing.Size(44, 13);
+            this.lblUyeAdi.Size = new System.Drawing.Size(57, 17);
             this.lblUyeAdi.TabIndex = 23;
             this.lblUyeAdi.Text = "Uye Adı";
             // 
             // lblUyeSoyadi
             // 
             this.lblUyeSoyadi.AutoSize = true;
-            this.lblUyeSoyadi.Location = new System.Drawing.Point(292, 349);
+            this.lblUyeSoyadi.Location = new System.Drawing.Point(389, 430);
+            this.lblUyeSoyadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeSoyadi.Name = "lblUyeSoyadi";
-            this.lblUyeSoyadi.Size = new System.Drawing.Size(61, 13);
+            this.lblUyeSoyadi.Size = new System.Drawing.Size(80, 17);
             this.lblUyeSoyadi.TabIndex = 22;
             this.lblUyeSoyadi.Text = "Uye Soyadı";
             // 
-            // listView1
+            // cmsSil
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.UyeAdi,
-            this.UyeSoyadi,
-            this.UyeTcKimlik,
-            this.UyeCeza});
-            this.listView1.Location = new System.Drawing.Point(3, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(797, 257);
-            this.listView1.TabIndex = 30;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.cmsSil.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem});
+            this.cmsSil.Name = "cmsSil";
+            this.cmsSil.Size = new System.Drawing.Size(95, 28);
+            this.cmsSil.Click += new System.EventHandler(this.cmsSil_Click);
             // 
-            // UyeAdi
+            // silToolStripMenuItem
             // 
-            this.UyeAdi.Text = "Uye Adi";
-            this.UyeAdi.Width = 120;
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.silToolStripMenuItem.Text = "Sil";
             // 
-            // UyeSoyadi
+            // lstUye
             // 
-            this.UyeSoyadi.Text = "Uye Soyadi";
-            this.UyeSoyadi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UyeSoyadi.Width = 120;
-            // 
-            // UyeTcKimlik
-            // 
-            this.UyeTcKimlik.Text = "Tc Kimlik No";
-            this.UyeTcKimlik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UyeTcKimlik.Width = 120;
-            // 
-            // UyeCeza
-            // 
-            this.UyeCeza.Text = "Ceza";
-            this.UyeCeza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UyeCeza.Width = 120;
+            this.lstUye.ContextMenuStrip = this.cmsSil;
+            this.lstUye.FormattingEnabled = true;
+            this.lstUye.ItemHeight = 16;
+            this.lstUye.Location = new System.Drawing.Point(1, 12);
+            this.lstUye.Name = "lstUye";
+            this.lstUye.Size = new System.Drawing.Size(1030, 292);
+            this.lstUye.TabIndex = 32;
             // 
             // UyeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lstUye);
             this.Controls.Add(this.btnUyeEkle);
             this.Controls.Add(this.txtUyeTc);
             this.Controls.Add(this.txtUyeSoyadi);
@@ -149,8 +145,11 @@
             this.Controls.Add(this.lblUyeTc);
             this.Controls.Add(this.lblUyeAdi);
             this.Controls.Add(this.lblUyeSoyadi);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UyeForm";
             this.Text = "UyeForm";
+            this.Load += new System.EventHandler(this.UyeForm_Load);
+            this.cmsSil.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,10 +164,8 @@
         private System.Windows.Forms.Label lblUyeTc;
         private System.Windows.Forms.Label lblUyeAdi;
         private System.Windows.Forms.Label lblUyeSoyadi;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader UyeAdi;
-        private System.Windows.Forms.ColumnHeader UyeSoyadi;
-        private System.Windows.Forms.ColumnHeader UyeTcKimlik;
-        private System.Windows.Forms.ColumnHeader UyeCeza;
+        private System.Windows.Forms.ContextMenuStrip cmsSil;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
+        private System.Windows.Forms.ListBox lstUye;
     }
 }

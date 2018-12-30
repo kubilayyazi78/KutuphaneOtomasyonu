@@ -28,10 +28,5 @@ namespace KutuphaneOtomasyonu.Entities
 
         public virtual ICollection<Kira> Kiralik { get; set; } = new HashSet<Kira>();
 
-        public override string ToString()
-        {
-            return this.KitapAdi + " - " + Yazar.YazarAdi;
-        }
-
     }
 }

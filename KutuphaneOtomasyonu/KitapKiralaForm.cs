@@ -47,12 +47,13 @@ namespace KutuphaneOtomasyonu
         private MyContext KiraGetir()
         {
             MyContext db = new MyContext();
-            dgvKirala.DataSource =
+            lstKira.DataSource =
                 db.Kiralar
                 .OrderBy(x => x.Uye.UyeAdi)
                 .Select(x => new KiralaView()
                 {
                     UyeId = x.Uye.UyeAdi,
+                    UyeId2 = x.Uye.UyeSoyadi,
                     KitapId = x.Kitap.KitapAdi,
                     AlinanTarih = x.AlinanTarih
                 }).ToList();

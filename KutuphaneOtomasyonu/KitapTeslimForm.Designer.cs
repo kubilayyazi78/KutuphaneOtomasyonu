@@ -34,18 +34,20 @@
             // 
             // lstTeslim
             // 
+            this.lstTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstTeslim.FormattingEnabled = true;
-            this.lstTeslim.ItemHeight = 16;
-            this.lstTeslim.Location = new System.Drawing.Point(12, 12);
+            this.lstTeslim.ItemHeight = 20;
+            this.lstTeslim.Location = new System.Drawing.Point(25, 100);
             this.lstTeslim.Name = "lstTeslim";
-            this.lstTeslim.Size = new System.Drawing.Size(776, 212);
+            this.lstTeslim.Size = new System.Drawing.Size(620, 244);
             this.lstTeslim.TabIndex = 0;
             // 
             // btnTeslim
             // 
-            this.btnTeslim.Location = new System.Drawing.Point(295, 275);
+            this.btnTeslim.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTeslim.Location = new System.Drawing.Point(665, 203);
             this.btnTeslim.Name = "btnTeslim";
-            this.btnTeslim.Size = new System.Drawing.Size(119, 40);
+            this.btnTeslim.Size = new System.Drawing.Size(185, 48);
             this.btnTeslim.TabIndex = 1;
             this.btnTeslim.Text = "Kitap Teslim Et";
             this.btnTeslim.UseVisualStyleBackColor = true;
@@ -55,7 +57,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::KutuphaneOtomasyonu.Properties.Resources.kira;
+            this.ClientSize = new System.Drawing.Size(982, 453);
             this.Controls.Add(this.btnTeslim);
             this.Controls.Add(this.lstTeslim);
             this.Name = "KitapTeslimForm";

@@ -49,7 +49,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1216, 28);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,14 +86,14 @@
             // kitapKiralaToolStripMenuItem
             // 
             this.kitapKiralaToolStripMenuItem.Name = "kitapKiralaToolStripMenuItem";
-            this.kitapKiralaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.kitapKiralaToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.kitapKiralaToolStripMenuItem.Text = "Kitap Kirala";
             this.kitapKiralaToolStripMenuItem.Click += new System.EventHandler(this.kitapKiralaToolStripMenuItem_Click);
             // 
             // kitapTeslimEtToolStripMenuItem
             // 
             this.kitapTeslimEtToolStripMenuItem.Name = "kitapTeslimEtToolStripMenuItem";
-            this.kitapTeslimEtToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.kitapTeslimEtToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.kitapTeslimEtToolStripMenuItem.Text = "Kitap Teslim Et";
             this.kitapTeslimEtToolStripMenuItem.Click += new System.EventHandler(this.kitapTeslimEtToolStripMenuItem_Click);
             // 
@@ -101,11 +101,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackgroundImage = global::KutuphaneOtomasyonu.Properties.Resources.anasayfa;
+            this.ClientSize = new System.Drawing.Size(1216, 646);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

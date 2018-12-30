@@ -47,65 +47,72 @@
             // 
             // txtKitapAdi
             // 
-            this.txtKitapAdi.Location = new System.Drawing.Point(475, 344);
+            this.txtKitapAdi.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKitapAdi.Location = new System.Drawing.Point(734, 190);
             this.txtKitapAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtKitapAdi.Name = "txtKitapAdi";
-            this.txtKitapAdi.Size = new System.Drawing.Size(160, 22);
+            this.txtKitapAdi.Size = new System.Drawing.Size(184, 35);
             this.txtKitapAdi.TabIndex = 13;
             // 
             // cmbYazarId
             // 
+            this.cmbYazarId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbYazarId.FormattingEnabled = true;
-            this.cmbYazarId.Location = new System.Drawing.Point(475, 388);
+            this.cmbYazarId.Location = new System.Drawing.Point(735, 232);
             this.cmbYazarId.Margin = new System.Windows.Forms.Padding(4);
             this.cmbYazarId.Name = "cmbYazarId";
-            this.cmbYazarId.Size = new System.Drawing.Size(160, 24);
+            this.cmbYazarId.Size = new System.Drawing.Size(183, 37);
             this.cmbYazarId.TabIndex = 12;
             // 
             // txtKitapAdeti
             // 
-            this.txtKitapAdeti.Location = new System.Drawing.Point(475, 424);
+            this.txtKitapAdeti.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKitapAdeti.Location = new System.Drawing.Point(733, 275);
             this.txtKitapAdeti.Margin = new System.Windows.Forms.Padding(4);
             this.txtKitapAdeti.Name = "txtKitapAdeti";
-            this.txtKitapAdeti.Size = new System.Drawing.Size(160, 22);
+            this.txtKitapAdeti.Size = new System.Drawing.Size(185, 35);
             this.txtKitapAdeti.TabIndex = 11;
             // 
             // lblKitapAdeti
             // 
             this.lblKitapAdeti.AutoSize = true;
-            this.lblKitapAdeti.Location = new System.Drawing.Point(391, 429);
+            this.lblKitapAdeti.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKitapAdeti.Location = new System.Drawing.Point(602, 276);
             this.lblKitapAdeti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKitapAdeti.Name = "lblKitapAdeti";
-            this.lblKitapAdeti.Size = new System.Drawing.Size(76, 17);
+            this.lblKitapAdeti.Size = new System.Drawing.Size(124, 29);
             this.lblKitapAdeti.TabIndex = 10;
             this.lblKitapAdeti.Text = "Kitap Adeti";
             // 
             // lblYazarId
             // 
             this.lblYazarId.AutoSize = true;
-            this.lblYazarId.Location = new System.Drawing.Point(391, 388);
+            this.lblYazarId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblYazarId.Location = new System.Drawing.Point(602, 235);
             this.lblYazarId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblYazarId.Name = "lblYazarId";
-            this.lblYazarId.Size = new System.Drawing.Size(69, 17);
+            this.lblYazarId.Size = new System.Drawing.Size(111, 29);
             this.lblYazarId.TabIndex = 9;
             this.lblYazarId.Text = "Yazar Adı";
             // 
             // lblKitapAdi
             // 
             this.lblKitapAdi.AutoSize = true;
-            this.lblKitapAdi.Location = new System.Drawing.Point(391, 349);
+            this.lblKitapAdi.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKitapAdi.Location = new System.Drawing.Point(602, 196);
             this.lblKitapAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKitapAdi.Name = "lblKitapAdi";
-            this.lblKitapAdi.Size = new System.Drawing.Size(68, 17);
+            this.lblKitapAdi.Size = new System.Drawing.Size(113, 29);
             this.lblKitapAdi.TabIndex = 8;
             this.lblKitapAdi.Text = "Kitap Adı ";
             // 
             // btnKitapEkle
             // 
-            this.btnKitapEkle.Location = new System.Drawing.Point(475, 472);
+            this.btnKitapEkle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKitapEkle.Location = new System.Drawing.Point(734, 318);
             this.btnKitapEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnKitapEkle.Name = "btnKitapEkle";
-            this.btnKitapEkle.Size = new System.Drawing.Size(161, 28);
+            this.btnKitapEkle.Size = new System.Drawing.Size(184, 46);
             this.btnKitapEkle.TabIndex = 7;
             this.btnKitapEkle.Text = "Kitap Ekle";
             this.btnKitapEkle.UseVisualStyleBackColor = true;
@@ -114,11 +121,12 @@
             // lstKitap
             // 
             this.lstKitap.ContextMenuStrip = this.cmsSil;
+            this.lstKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstKitap.FormattingEnabled = true;
-            this.lstKitap.ItemHeight = 16;
-            this.lstKitap.Location = new System.Drawing.Point(12, 24);
+            this.lstKitap.ItemHeight = 20;
+            this.lstKitap.Location = new System.Drawing.Point(25, 100);
             this.lstKitap.Name = "lstKitap";
-            this.lstKitap.Size = new System.Drawing.Size(1043, 212);
+            this.lstKitap.Size = new System.Drawing.Size(500, 244);
             this.lstKitap.TabIndex = 14;
             this.lstKitap.SelectedIndexChanged += new System.EventHandler(this.lstKitap_SelectedIndexChanged);
             // 
@@ -139,9 +147,10 @@
             // 
             // btnKitapGuncelle
             // 
-            this.btnKitapGuncelle.Location = new System.Drawing.Point(475, 297);
+            this.btnKitapGuncelle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKitapGuncelle.Location = new System.Drawing.Point(734, 128);
             this.btnKitapGuncelle.Name = "btnKitapGuncelle";
-            this.btnKitapGuncelle.Size = new System.Drawing.Size(160, 29);
+            this.btnKitapGuncelle.Size = new System.Drawing.Size(184, 43);
             this.btnKitapGuncelle.TabIndex = 16;
             this.btnKitapGuncelle.Text = "Kitap Güncelle";
             this.btnKitapGuncelle.UseVisualStyleBackColor = true;
@@ -149,9 +158,10 @@
             // 
             // txtKitapAra
             // 
-            this.txtKitapAra.Location = new System.Drawing.Point(475, 255);
+            this.txtKitapAra.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKitapAra.Location = new System.Drawing.Point(733, 77);
             this.txtKitapAra.Name = "txtKitapAra";
-            this.txtKitapAra.Size = new System.Drawing.Size(161, 22);
+            this.txtKitapAra.Size = new System.Drawing.Size(185, 35);
             this.txtKitapAra.TabIndex = 17;
             this.txtKitapAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKitapAra_KeyUp);
             // 
@@ -165,7 +175,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackgroundImage = global::KutuphaneOtomasyonu.Properties.Resources.kitap;
+            this.ClientSize = new System.Drawing.Size(982, 453);
             this.Controls.Add(this.txtKitapAra);
             this.Controls.Add(this.btnKitapGuncelle);
             this.Controls.Add(this.lstKitap);

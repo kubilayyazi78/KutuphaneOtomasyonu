@@ -13,6 +13,6 @@ namespace KutuphaneOtomasyonu.ViewModels
         public string YazarId { get; set; }
         public int Adet { get; set; } = 0;
 
-       public override string ToString() => ($"{KitapAdi} Kalan Miktar : {Adet}");
+       public override string ToString() => ($"{KitapAdi.Substring(0,1).ToUpper()+KitapAdi.Substring(1).ToLower()} Kalan Miktar: - ({Adet})");
     }
 }

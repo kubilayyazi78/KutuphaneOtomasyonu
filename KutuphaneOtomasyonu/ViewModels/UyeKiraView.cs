@@ -11,6 +11,6 @@ namespace KutuphaneOtomasyonu.ViewModels
         public int UyeId { get; set; }
         public string UyeAdi { get; set; }
         public string UyeSoyadi { get; set; }
-        public override string ToString() => ($"{UyeAdi} {UyeSoyadi}");
+        public override string ToString() => ($"{UyeAdi.Substring(0,1).ToUpper()+UyeAdi.Substring(1).ToLower()}-{UyeSoyadi.Substring(0,1).ToUpper()+UyeSoyadi.Substring(1).ToLower()}");
     }
 }

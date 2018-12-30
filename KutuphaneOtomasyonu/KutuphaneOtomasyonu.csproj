@@ -208,6 +208,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UyeForm.resx">
       <DependentUpon>UyeForm.cs</DependentUpon>
@@ -229,6 +230,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\anasayfa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yazar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uye.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kira.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

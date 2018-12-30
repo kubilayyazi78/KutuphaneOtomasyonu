@@ -48,10 +48,11 @@
             // 
             // btnUyeEkle
             // 
-            this.btnUyeEkle.Location = new System.Drawing.Point(493, 519);
+            this.btnUyeEkle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyeEkle.Location = new System.Drawing.Point(722, 348);
             this.btnUyeEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUyeEkle.Name = "btnUyeEkle";
-            this.btnUyeEkle.Size = new System.Drawing.Size(132, 28);
+            this.btnUyeEkle.Size = new System.Drawing.Size(170, 35);
             this.btnUyeEkle.TabIndex = 29;
             this.btnUyeEkle.Text = "Uye Ekle";
             this.btnUyeEkle.UseVisualStyleBackColor = true;
@@ -59,55 +60,61 @@
             // 
             // txtUyeTc
             // 
-            this.txtUyeTc.Location = new System.Drawing.Point(493, 476);
+            this.txtUyeTc.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUyeTc.Location = new System.Drawing.Point(722, 301);
             this.txtUyeTc.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeTc.Name = "txtUyeTc";
-            this.txtUyeTc.Size = new System.Drawing.Size(132, 22);
+            this.txtUyeTc.Size = new System.Drawing.Size(170, 35);
             this.txtUyeTc.TabIndex = 27;
             // 
             // txtUyeSoyadi
             // 
-            this.txtUyeSoyadi.Location = new System.Drawing.Point(493, 439);
+            this.txtUyeSoyadi.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUyeSoyadi.Location = new System.Drawing.Point(722, 251);
             this.txtUyeSoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeSoyadi.Name = "txtUyeSoyadi";
-            this.txtUyeSoyadi.Size = new System.Drawing.Size(132, 22);
+            this.txtUyeSoyadi.Size = new System.Drawing.Size(170, 35);
             this.txtUyeSoyadi.TabIndex = 26;
             // 
             // txtUyeAdi
             // 
-            this.txtUyeAdi.Location = new System.Drawing.Point(493, 400);
+            this.txtUyeAdi.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUyeAdi.Location = new System.Drawing.Point(722, 200);
             this.txtUyeAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUyeAdi.Name = "txtUyeAdi";
-            this.txtUyeAdi.Size = new System.Drawing.Size(132, 22);
+            this.txtUyeAdi.Size = new System.Drawing.Size(170, 35);
             this.txtUyeAdi.TabIndex = 25;
             // 
             // lblUyeTc
             // 
             this.lblUyeTc.AutoSize = true;
-            this.lblUyeTc.Location = new System.Drawing.Point(389, 484);
+            this.lblUyeTc.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUyeTc.Location = new System.Drawing.Point(568, 304);
             this.lblUyeTc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeTc.Name = "lblUyeTc";
-            this.lblUyeTc.Size = new System.Drawing.Size(93, 17);
+            this.lblUyeTc.Size = new System.Drawing.Size(148, 29);
             this.lblUyeTc.TabIndex = 24;
             this.lblUyeTc.Text = "Uye Tc Kimlik";
             // 
             // lblUyeAdi
             // 
             this.lblUyeAdi.AutoSize = true;
-            this.lblUyeAdi.Location = new System.Drawing.Point(389, 403);
+            this.lblUyeAdi.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUyeAdi.Location = new System.Drawing.Point(577, 206);
             this.lblUyeAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeAdi.Name = "lblUyeAdi";
-            this.lblUyeAdi.Size = new System.Drawing.Size(57, 17);
+            this.lblUyeAdi.Size = new System.Drawing.Size(92, 29);
             this.lblUyeAdi.TabIndex = 23;
             this.lblUyeAdi.Text = "Uye Adı";
             // 
             // lblUyeSoyadi
             // 
             this.lblUyeSoyadi.AutoSize = true;
-            this.lblUyeSoyadi.Location = new System.Drawing.Point(389, 448);
+            this.lblUyeSoyadi.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUyeSoyadi.Location = new System.Drawing.Point(577, 254);
             this.lblUyeSoyadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUyeSoyadi.Name = "lblUyeSoyadi";
-            this.lblUyeSoyadi.Size = new System.Drawing.Size(80, 17);
+            this.lblUyeSoyadi.Size = new System.Drawing.Size(124, 29);
             this.lblUyeSoyadi.TabIndex = 22;
             this.lblUyeSoyadi.Text = "Uye Soyadı";
             // 
@@ -129,19 +136,21 @@
             // lstUye
             // 
             this.lstUye.ContextMenuStrip = this.cmsSil;
+            this.lstUye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstUye.FormattingEnabled = true;
-            this.lstUye.ItemHeight = 16;
-            this.lstUye.Location = new System.Drawing.Point(1, 12);
+            this.lstUye.ItemHeight = 20;
+            this.lstUye.Location = new System.Drawing.Point(25, 100);
             this.lstUye.Name = "lstUye";
-            this.lstUye.Size = new System.Drawing.Size(1030, 292);
+            this.lstUye.Size = new System.Drawing.Size(500, 244);
             this.lstUye.TabIndex = 32;
             this.lstUye.SelectedIndexChanged += new System.EventHandler(this.lstUye_SelectedIndexChanged);
             // 
             // btnUyeGuncelle
             // 
-            this.btnUyeGuncelle.Location = new System.Drawing.Point(493, 350);
+            this.btnUyeGuncelle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyeGuncelle.Location = new System.Drawing.Point(722, 75);
             this.btnUyeGuncelle.Name = "btnUyeGuncelle";
-            this.btnUyeGuncelle.Size = new System.Drawing.Size(132, 32);
+            this.btnUyeGuncelle.Size = new System.Drawing.Size(170, 42);
             this.btnUyeGuncelle.TabIndex = 33;
             this.btnUyeGuncelle.Text = "Uye Güncelle";
             this.btnUyeGuncelle.UseVisualStyleBackColor = true;
@@ -149,34 +158,38 @@
             // 
             // txtUyeArama
             // 
-            this.txtUyeArama.Location = new System.Drawing.Point(493, 310);
+            this.txtUyeArama.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUyeArama.Location = new System.Drawing.Point(722, 34);
             this.txtUyeArama.Name = "txtUyeArama";
-            this.txtUyeArama.Size = new System.Drawing.Size(132, 22);
+            this.txtUyeArama.Size = new System.Drawing.Size(170, 35);
             this.txtUyeArama.TabIndex = 34;
             this.txtUyeArama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUyeArama_KeyUp);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(696, 365);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(717, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 17);
+            this.label1.Size = new System.Drawing.Size(187, 29);
             this.label1.TabIndex = 35;
             this.label1.Text = "Üyenin Ceza Puanı";
             // 
             // lblCeza
             // 
             this.lblCeza.AutoSize = true;
-            this.lblCeza.Location = new System.Drawing.Point(712, 405);
+            this.lblCeza.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCeza.Location = new System.Drawing.Point(806, 159);
             this.lblCeza.Name = "lblCeza";
-            this.lblCeza.Size = new System.Drawing.Size(0, 17);
+            this.lblCeza.Size = new System.Drawing.Size(0, 29);
             this.lblCeza.TabIndex = 36;
             // 
             // UyeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackgroundImage = global::KutuphaneOtomasyonu.Properties.Resources.uye;
+            this.ClientSize = new System.Drawing.Size(982, 453);
             this.Controls.Add(this.lblCeza);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUyeArama);

@@ -33,7 +33,7 @@ namespace KutuphaneOtomasyonu
                  }).ToList();
             cmbUyeAdi.DataSource = uyeAdi.ToList();
 
-            
+
             var kitapAdi = db.Kitaplar
                  .Select(x => new KitapUyeView()
                  {
@@ -63,34 +63,42 @@ namespace KutuphaneOtomasyonu
         int uyId;
         private void btnKirala_Click(object sender, EventArgs e)
         {
-            KitapUyeView seciliKitap = (KitapUyeView)cmbKitapAdi.SelectedItem;
-            ktpId = seciliKitap.KitapId;
-            UyeKiraView seciliUye = (UyeKiraView)cmbUyeAdi.SelectedItem;
-            uyId = seciliUye.UyeId;
-            MyContext db = new MyContext();
-            db.Kiralar.Add(new Kira()
+            try
             {
-                KitapId = ktpId,
-                UyeId = uyId
-            });
-         
-            KiraGetir();
+                KitapUyeView seciliKitap = (KitapUyeView)cmbKitapAdi.SelectedItem;
+                ktpId = seciliKitap.KitapId;
+                UyeKiraView seciliUye = (UyeKiraView)cmbUyeAdi.SelectedItem;
+                uyId = seciliUye.UyeId;
+                MyContext db = new MyContext();
+                db.Kiralar.Add(new Kira()
+                {
+                    KitapId = ktpId,
+                    UyeId = uyId
+                });
 
-            var stok = db.Kitaplar.Find(ktpId);
-            
-            if (stok.Adet>0)
-            {
-                stok.Adet--;
-               
-                db.SaveChanges();
                 KiraGetir();
+
+                var stok = db.Kitaplar.Find(ktpId);
+
+                if (stok.Adet > 0)
+                {
+                    stok.Adet--;
+
+                    db.SaveChanges();
+                    KiraGetir();
+                }
+                else if (stok.Adet == 0)
+                {
+                    MessageBox.Show("Seçilen Kitap Kütüphanemizde Kalmamıştır.");
+                }
             }
-            else if (stok.Adet ==0)
+            catch
             {
-                MessageBox.Show("Seçilen Kitap Kütüphanemizde Kalmamıştır.");
+
+                MessageBox.Show("Hatalı İşlem Yaptınız");
             }
-            
-            
+
+
         }
     }
 }

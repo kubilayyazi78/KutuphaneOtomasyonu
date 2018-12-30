@@ -108,6 +108,26 @@
     <Compile Include="Migrations\201812280816561_iliskiler5.Designer.cs">
       <DependentUpon>201812280816561_iliskiler5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812300938558_deneme.cs" />
+    <Compile Include="Migrations\201812300938558_deneme.Designer.cs">
+      <DependentUpon>201812300938558_deneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812300954045_deneme2.cs" />
+    <Compile Include="Migrations\201812300954045_deneme2.Designer.cs">
+      <DependentUpon>201812300954045_deneme2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812300959260_deneme5.cs" />
+    <Compile Include="Migrations\201812300959260_deneme5.Designer.cs">
+      <DependentUpon>201812300959260_deneme5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812301028327_deneme6.cs" />
+    <Compile Include="Migrations\201812301028327_deneme6.Designer.cs">
+      <DependentUpon>201812301028327_deneme6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812301039262_deneme9.cs" />
+    <Compile Include="Migrations\201812301039262_deneme9.Designer.cs">
+      <DependentUpon>201812301039262_deneme9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Program.cs" />
@@ -164,6 +184,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812280816561_iliskiler5.resx">
       <DependentUpon>201812280816561_iliskiler5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812300938558_deneme.resx">
+      <DependentUpon>201812300938558_deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812300954045_deneme2.resx">
+      <DependentUpon>201812300954045_deneme2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812300959260_deneme5.resx">
+      <DependentUpon>201812300959260_deneme5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812301028327_deneme6.resx">
+      <DependentUpon>201812301028327_deneme6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812301039262_deneme9.resx">
+      <DependentUpon>201812301039262_deneme9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

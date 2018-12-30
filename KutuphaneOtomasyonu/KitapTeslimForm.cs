@@ -26,6 +26,22 @@ namespace KutuphaneOtomasyonu
             var kitapId = (lstTeslim.SelectedItem as TeslimView).KitapId;
             var uyeId = (lstTeslim.SelectedItem as TeslimView).UyeId;
             var stok = db.Kitaplar.Find(kitapId);
+            var ceza = db.Uyeler.Find(uyeId);
+            var satir = db.Kiralar.Find(uyeId, kitapId);
+            DateTime alinan = satir.AlinanTarih;
+            DateTime simdikiZaman = DateTime.Now;
+            TimeSpan fark = simdikiZaman - alinan;
+            int sonuc = fark.Minutes;
+            if (sonuc > 5)
+            {
+                ceza.Ceza = sonuc * 2;
+                db.SaveChanges();
+                MessageBox.Show("Kitabı Geç Getirdiğiniz İçin Ceza Verildi");
+            }
+
+
+
+
             stok.Adet++;
             var rawQuery = db.Database.SqlQuery<RawQuery>(
            "delete from Kiralar where UyeId =" + uyeId + " and KitapId =" + kitapId);
@@ -33,6 +49,7 @@ namespace KutuphaneOtomasyonu
             lstTeslim.DataSource = rawQuery.ToList();
             MessageBox.Show("Seçili Kitap Teslim Edildi");
             KiraTeslimGetir();
+
 
         }
 

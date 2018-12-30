@@ -21,8 +21,14 @@ namespace KutuphaneOtomasyonu.Entities
         [Key]
         [Column(Order = 2)]
         public int KitapId { get; set; }
+
         [Column("Eklenme", TypeName = "smalldatetime")]
         public DateTime AlinanTarih { get; set; } = DateTime.Now;
+
+        //[Index(IsUnique = true)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int KiraId { get; set; } = 1;
+
         [ForeignKey("KitapId")]
         public virtual Kitap Kitap { get; set; }
         [ForeignKey("UyeId")]

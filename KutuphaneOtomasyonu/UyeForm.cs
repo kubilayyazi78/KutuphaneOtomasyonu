@@ -97,6 +97,7 @@ namespace KutuphaneOtomasyonu
             txtUyeAdi.Text = uye.UyeAdi;
             txtUyeSoyadi.Text = uye.UyeSoyadi;
             txtUyeTc.Text = uye.TcKimlik;
+            lblCeza.Text = uye.Ceza.ToString();
 
         }
 
